@@ -1,5 +1,8 @@
 package listes;
 
+import tri.ComparatorHabitant;
+import tri.ComparatorNom;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -47,8 +50,13 @@ public class TestVilles {
             }
         }
         System.out.println(villes);
+        Collections.sort(villes);
+        System.out.println("Dans l'ordre : " + villes);
 
-
+        Collections.sort(villes, new ComparatorHabitant());
+        System.out.println(villes);
+        Collections.sort(villes, new ComparatorNom());
+        System.out.println(villes);
 
     }
 }
