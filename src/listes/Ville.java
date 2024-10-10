@@ -17,7 +17,7 @@ public class Ville implements Comparable<Ville> {
         return 0;
     }
 
-    Ville(String nom, int nbHabitants) {
+    public Ville(String nom, int nbHabitants) {
         this.nom = nom;
         this.nbHabitants = nbHabitants;
     }
