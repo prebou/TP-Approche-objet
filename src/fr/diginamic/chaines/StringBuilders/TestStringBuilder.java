@@ -1,5 +1,7 @@
 package fr.diginamic.chaines.StringBuilders;
 
+import java.util.Date;
+
 public class TestStringBuilder {
     public static void main(String[] args) {
         //StringBuilder builder = new StringBuilder();
@@ -13,5 +15,7 @@ public class TestStringBuilder {
         }
         long fin = System.currentTimeMillis();
         System.out.println("Temps écoulé en millisecondes :" + (fin - debut));
+        Date date = new Date(124,9,14);
+
     }
 }
