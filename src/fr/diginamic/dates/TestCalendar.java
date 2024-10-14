@@ -9,9 +9,9 @@ public class TestCalendar {
         Calendar date = Calendar.getInstance();
         date.set(2016,4,19,23,59,30);
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/YYYY HH:mm:ss");
-        Locale russe = new Locale("ru","RU");
-        Locale chinois = new Locale("zh","CN");
-        Locale allemagne = new Locale("de","GER");
+        Locale russe = Locale.of("ru","RU");
+        Locale chinois = Locale.of("zh","CN");
+        Locale allemagne = Locale.of("de","GER");
 
         SimpleDateFormat dateFormat1 = new SimpleDateFormat("EEEE dd MMMM YYYY HH:mm:ss");
         System.out.println(dateFormat.format(date.getTime()));

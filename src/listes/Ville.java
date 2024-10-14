@@ -1,6 +1,8 @@
 package listes;
 
 
+import java.util.Objects;
+
 public class Ville implements Comparable<Ville> {
     String nom;
     int nbHabitants;
@@ -15,6 +17,17 @@ public class Ville implements Comparable<Ville> {
             return -1;
         }
         return 0;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        Ville autre = (Ville) obj;
+
+        //return Objects.equals(autre.nom, nom) && (Objects.equals(autre.nbHabitants, nbHabitants));
+        return nom.equals(autre.nom) && nbHabitants == autre.nbHabitants;
     }
 
     public Ville(String nom, int nbHabitants) {
